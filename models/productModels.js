@@ -28,7 +28,10 @@ var productSchema = new mongoose.Schema({
         type: String,
         enum: ["Black", "Brown", "Red"],
     },
-    quantity: Number,
+    quantity: {
+        type:Number,
+        required:true
+    },
     sold:{
         type:Number,
         default:0,
